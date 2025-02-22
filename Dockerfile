@@ -25,7 +25,7 @@ COPY --from=build-env /app/out .
 # Expose the port the app runs on
 EXPOSE 5056
 
-ENV ASPNETCORE_ENVIRONMENT=Docker
+ENV ASPNETCORE_ENVIRONMENT=Docker 
 
 # Set the entry point for the container
 ENTRYPOINT ["dotnet", "MPCalcHub.Api.dll"]
