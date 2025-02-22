@@ -46,7 +46,8 @@ if (string.IsNullOrEmpty(jwtKeyConfig))
     throw new InvalidOperationException("JWT:Key configuration is missing or empty.");
 
 builder.Services.Configure<TokenSettings>(builder.Configuration.GetSection("JWT"));
-builder.WebHost.UseUrls("https://0.0.0.0:5056");
+// builder.WebHost.UseUrls("https://0.0.0.0:5056");
+builder.WebHost.UseUrls("https://localhost:5056");
 
 builder.Services.AddAuthentication(o =>
 {
